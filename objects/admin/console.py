@@ -1,4 +1,4 @@
-from objects.entry import Entry
+from objects.admin.entry import Entry
 from direct.showbase.DirectObject import DirectObject
 from objects.notifier import Notifier
 from direct.gui.OnscreenText import OnscreenText
@@ -31,7 +31,6 @@ class Console(Entry, DirectObject, Notifier):
         self.destroy()
 
     def entered_command(self, text):
-        self.notify.debug(f"[entered_command] Ran command `{text}` in console")
         split = text.split()
         success = False
 

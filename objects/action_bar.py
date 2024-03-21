@@ -22,7 +22,7 @@ class ActionBar:
         self.actions = actions
 
         image_scale = (0.1, 0, 0.1)
-        scale = 10
+        scale = 20
         pos = {
             1: [
                 (0.4, 0, 0.55)

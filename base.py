@@ -1,10 +1,8 @@
-from direct.gui import DirectButton
-
 from objects.clock import Clock
 from direct.showbase.ShowBase import ShowBase
 from objects.selfportrait import SelfPortrait
-from objects.console import Console
-from panda3d.core import loadPrcFile, Multifile, VirtualFileSystem, TransparencyAttrib
+from objects.admin.console import Console
+from panda3d.core import loadPrcFile, Multifile, VirtualFileSystem
 from objects.player import Player
 from objects.statswidget import StatsWidget
 from objects.action_bar import ActionBar
@@ -41,13 +39,7 @@ class Monotony(ShowBase):
         print("YUP")
 
     def pressed_tilda(self):
-        if self.console is None:
-            self.console = Console(self)
-        else:
-            self.console.destroy()
-            self.console = None
-
-
+        self.console = Console(self)
 
 
 app = Monotony()

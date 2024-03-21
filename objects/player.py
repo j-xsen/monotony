@@ -17,10 +17,10 @@ class Player(Notifier):
         self.location = HOME
         self.location_object = None
         self.active = True  # this is if the player can take an action
-        self.hygiene = 100
-        self.hunger = 100
+        self.hygiene = 25
+        self.hunger = 50
         self.sleep = 100
-        self.money = 100
+        self.money = 0
         self.head_to_location(HOME)
 
     def head_to_location(self, destination, stage=0):

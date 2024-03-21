@@ -38,7 +38,8 @@ class StatsWidget:
         self.task_update_stats = taskMgr.doMethodLater(1, self.update_stats_task, 'update_stats')
 
     def update_stats(self):
-        self.hour_text.setText(f"[{str(self.clock.time)}]")  # clock
+        # self.hour_text.setText(f"[{str(self.clock.time)}]")  # clock
+        self.hour_text.setText('[{:04d}]'.format(int(self.clock.time)))
         self.money_text.setText(f"${self.player.money}")  # money
         # hygiene
         # hunger

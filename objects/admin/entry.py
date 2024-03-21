@@ -5,7 +5,7 @@ from direct.showbase.DirectObject import DirectObject
 class Entry(DirectObject):
     def __init__(self, placeholder, pos, on_enter, focus=False, sort_order=0):
         """
-        Object of a simple entry field
+        Entry of console command
         @param placeholder: text to appear in textbox automatically
         @type placeholder: string
         @param pos: where to place the textbox
